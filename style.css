@@ -1,92 +1,383 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --accent-color: #007bff; /* 定义强调色变量 */
+    --text-color: #333;
+    --light-text-color: #555;
+    --background-color: #f4f4f4;
+    --card-background-color: #ffffff;
+    --header-footer-bg: #2c3e50; /* 深蓝灰色 */
+    --header-footer-text: #ecf0f1; /* 浅灰，配合深色背景 */
+}
+
 body {
-    font-family: Arial, sans-serif; /* 设置默认字体 */
-    line-height: 1.6; /* 设置行高，增加可读性 */
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* 设置页面背景色 */
-    color: #333; /* 设置默认文字颜色 */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background: linear-gradient(135deg, var(--header-footer-bg), #34495e); /* 背景渐变 */
+    color: var(--header-footer-text);
+    padding: 2rem 1rem; /* 调整内边距 */
+    text-align: center; /* 对 nav 居中仍然有效 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-main-content {
+    display: flex;
+    align-items: center; /* 垂直居中对齐图片组合和名字 */
+    justify-content: center; /* 水平居中整个组合 */
+    gap: 25px; /* 图片组合和名字之间的间距 */
+    margin-bottom: 1.5rem; /* 与下方导航栏的间距 */
+    flex-wrap: wrap; /* 在小屏幕上允许换行 */
+}
+
+.image-with-caption {
+    display: flex;
+    flex-direction: column; /* 图片在上，“我推”在下 */
+    align-items: center; /* 内部元素水平居中 */
+}
+
+.profile-image {
+    width: 100px; /* 您可以按需调整图片大小 */
+    height: 100px;
+    border-radius: 50%; 
+    /* 如果希望是圆形 */
+    overflow: hidden;
+    margin-bottom: 8px; /* 图片和下方“我推”文字的间距 */
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-caption {
+    font-size: 0.9em;
+    color: var(--header-footer-text);
+    margin: 0;
+    font-weight: 600;
 }
 
 header h1 {
-    margin: 0;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--header-footer-text);
+    margin: 0; /* Flex gap 会处理间距 */
+    text-align: left; /* 当与图片并排时，名字部分靠左 */
+}
+
+nav {
+    /* margin-top: 1rem; -- 由 .header-main-content 的 margin-bottom 控制 */
+    /* padding-bottom: 1rem; -- 根据需要调整 */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); -- 根据需要调整 */
+    text-align: center;
 }
 
 nav ul {
     padding: 0;
-    list-style: none; /* 去掉列表项前面的点 */
+    list-style: none;
+    margin: 0;
+    display: flex; /* 使导航项水平排列 */
+    justify-content: center; /* 水平居中导航项 */
+    flex-wrap: wrap; /* 小屏幕换行 */
 }
 
 nav ul li {
-    display: inline; /* 让导航项水平排列 */
-    margin-right: 20px;
+    margin: 5px 15px; /* 调整导航项间距和垂直间距以适应换行 */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none; /* 去掉链接下划线 */
+nav ul li a {
+    color: var(--header-footer-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* 确保 padding 生效 */
 }
 
-nav a:hover {
-    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+nav ul li a:hover, nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--accent-color);
 }
 
 main {
-    width: 80%; /* 主内容区域宽度为80% */
-    margin: 20px auto; /* 上下20px边距，左右自动居中 */
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 添加一点阴影效果 */
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
 }
 
 section {
-    margin-bottom: 30px; /* 每个区域下方留白 */
+    margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee; /* 每个区域下方加一条分隔线 */
 }
 
-section:last-child {
-    border-bottom: none; /* 最后一个区域不需要分隔线 */
+section:last-of-type {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 h2 {
-    color: #333;
-    border-bottom: 2px solid #333; /* 标题下方加粗线条 */
-    padding-bottom: 5px;
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-color);
+    display: flex;
+    align-items: center;
 }
 
 h3 {
-    color: #555;
+    color: var(--light-text-color);
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-article {
-    margin-bottom: 20px;
+section i, header i, footer i { /* 通用图标样式，header 和 footer 的图标也受此影响 */
+    margin-right: 10px;
+    color: var(--accent-color); /* 大部分图标使用强调色 */
+    font-size: 0.9em;
 }
+
+h2 > i, h3 > i { /* 标题中的图标 */
+    font-size: 1em; /* 相对于标题字体大小 */
+    color: inherit; /* 继承 h2, h3 的颜色 (即强调色) */
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+section ul li i {
+    margin-right: 12px;
+    color: var(--light-text-color); /* 列表项图标用稍浅的颜色 */
+    width: 20px; /* 固定宽度方便对齐 */
+    text-align: center;
+    margin-top: 4px; /* 微调垂直对齐 */
+}
+
+
+article { /* 项目卡片 */
+    background-color: #fdfdfd;
+    border: 1px solid #e9e9e9;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+article h3 { /* 项目卡片内的H3 */
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+article ul {
+    padding-left: 5px;
+}
+article ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+article ul li strong {
+    font-weight: 600;
+}
+article ul li i {
+    margin-top: 2px;
+    color: var(--accent-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.skill-category {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    color: var(--accent-color);
+}
+.skill-category ul {
+    margin-top: 15px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff !important;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+p a, section ul li a { /* 通用段落和列表内链接 */
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover, section ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
 
 footer {
+    background: linear-gradient(135deg, #34495e, var(--header-footer-bg));
+    color: var(--header-footer-text);
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 30px;
+    padding: 2.5rem 0;
+    margin-top: 0;
+    font-size: 0.9rem;
 }
 
-/* 响应式设计：针对小屏幕设备调整样式 */
+footer p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
-    main {
-        width: 95%;
+    body {
+        font-size: 15px;
+    }
+    header {
+        padding: 1.5rem 1rem;
+    }
+    /* .header-main-content 已经在较小断点处理，这里可以不重复 */
+    /* header h1 已经在较小断点处理 */
+
+    nav ul {
+        /* flex-direction: column; -- 在更小断点处理，或者如果希望此时就垂直 */
+        /* align-items: center; */
+    }
+    nav ul li {
+        /* margin: 10px 0; -- 如果此时导航垂直排列 */
     }
 
-    nav ul li {
-        display: block; /* 导航项在小屏幕上垂直排列 */
-        margin-bottom: 10px;
+    main {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto 0;
     }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    /* .profile-image 已经在较小断点处理 */
+}
+
+@media (max-width: 580px) { /* 针对页头布局的特定断点 */
+    .header-main-content {
+        flex-direction: column; /* 图片组合和名字垂直排列 */
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        text-align: center; /* 当垂直堆叠时，名字居中 */
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    nav ul { /* 在这个断点让导航也垂直堆叠 */
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 8px 0; /* 调整垂直导航项间距 */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    /* nav ul li 已经处理 */
+    main {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    /* .profile-image 已经处理 */
 }
