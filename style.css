@@ -1,0 +1,92 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif; /* 设置默认字体 */
+    line-height: 1.6; /* 设置行高，增加可读性 */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 设置页面背景色 */
+    color: #333; /* 设置默认文字颜色 */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none; /* 去掉列表项前面的点 */
+}
+
+nav ul li {
+    display: inline; /* 让导航项水平排列 */
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none; /* 去掉链接下划线 */
+}
+
+nav a:hover {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+main {
+    width: 80%; /* 主内容区域宽度为80% */
+    margin: 20px auto; /* 上下20px边距，左右自动居中 */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 添加一点阴影效果 */
+}
+
+section {
+    margin-bottom: 30px; /* 每个区域下方留白 */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* 每个区域下方加一条分隔线 */
+}
+
+section:last-child {
+    border-bottom: none; /* 最后一个区域不需要分隔线 */
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333; /* 标题下方加粗线条 */
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #555;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* 响应式设计：针对小屏幕设备调整样式 */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block; /* 导航项在小屏幕上垂直排列 */
+        margin-bottom: 10px;
+    }
+}
