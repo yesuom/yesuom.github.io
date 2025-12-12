@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Mousey&#39;Log</title>
+    <link>http://localhost:2686/posts/</link>
+    <description>Recent content in Posts on Mousey&#39;Log</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:2686/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LIF Neuron Model</title>
+      <link>http://localhost:2686/posts/lif-intro/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:2686/posts/lif-intro/</guid>
+      <description>&lt;p&gt;Here is a note about &lt;strong&gt;Leaky Integrate-and-Fire (LIF)&lt;/strong&gt; model.&lt;/p&gt;
+&lt;h2 id=&#34;the-equation&#34;&gt;The Equation&lt;/h2&gt;
+&lt;p&gt;The dynamics of the membrane potential $V(t)$ is described by:&lt;/p&gt;
+$$
+\tau_m \frac{dV}{dt} = -(V(t) - V_{rest}) + R \cdot I(t)
+$$&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\tau_m$ is the membrane time constant.&lt;/li&gt;
+&lt;li&gt;$I(t)$ is the input current.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Self Introduction</title>
+      <link>http://localhost:2686/posts/self-intro/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:2686/posts/self-intro/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a law student but interested in Computational Neuroscience, Psychology and AI now. So I need to learn a lot about these themes.&lt;/p&gt;
+&lt;p&gt;To document the journey of this career transition, connect with more people who share the same interests, and provide references for those who, like me, are looking to switch careers, I would like to share my experiences and study notes on this website.&lt;/p&gt;
+&lt;p&gt;曾经怀着一腔热血和对正义的向往进入了法学院，却发现自己并不喜欢这里。后来出于对智能与人性本质的追寻修读了心理学双学位，并逐渐喜欢上神经建模、认知建模和人工智能。&lt;/p&gt;
+&lt;p&gt;目前正在积极学习相关知识，并希望通过博客记录自己的学习过程。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

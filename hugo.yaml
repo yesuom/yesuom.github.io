@@ -1,0 +1,55 @@
+baseURL: https://yesuom.github.io/
+languageCode: en-us
+title: Mousey'Log
+theme: ["PaperMod"]
+
+enableInlineShortcodes: true
+enableEmoji: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - - $$
+              - $$
+            - - \\[
+              - \\]
+          inline:
+            - - $
+              - $
+            - - \\(
+              - \\)
+
+params:
+  env: production
+  title: "Mousey Log"
+  description: "Notes on Computational Neuroscience."
+  author: "Yesuom"
+  defaultTheme: auto
+  
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  
+  homeInfoParams:
+    Title: "Welcome to Mousey'Log 👋"
+    Content: >
+      Hi, this is Yesuom, a student interested in Computational Neuroscience, Psychology and AI, and I'm documenting my learning notes in this blog.
+  
+  socialIcons:
+    - name: github
+      url: "https://github.com/yesuom"
+    # - name: xiaohongshu
+    #   url: "https://twitter.com/你的用户名"
+
+  assets:
+    disableHLJS: false

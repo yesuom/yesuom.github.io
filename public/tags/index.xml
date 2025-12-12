@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Mousey&#39;Log</title>
+    <link>http://localhost:2686/tags/</link>
+    <description>Recent content in Tags on Mousey&#39;Log</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:2686/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life</title>
+      <link>http://localhost:2686/tags/life/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:2686/tags/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neuroscience</title>
+      <link>http://localhost:2686/tags/neuroscience/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:2686/tags/neuroscience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SNN</title>
+      <link>http://localhost:2686/tags/snn/</link>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:2686/tags/snn/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
