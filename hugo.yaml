@@ -48,8 +48,10 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/yesuom"
-    # - name: xiaohongshu
-    #   url: "https://twitter.com/你的用户名"
+    - name: xiaohongshu
+      url: "https://www.xiaohongshu.com/user/profile/68d0467e0000000001004109"
+    - name: bilibili
+      url: "https://space.bilibili.com/102734966"
 
   assets:
     disableHLJS: false
